@@ -63,22 +63,29 @@ public class main {
                 vetor[i] = br.readLine();   
             }
         if(selecaoSort == 1){
+            Long tempoInicial = System.currentTimeMillis();
+
             BubbleSort.MakeBubbleSort(vetor);
             System.out.println("VETOR ORDENADO");
 
             for(int i = 0; i< vetor.length;i++){
                 System.out.println(vetor[i]);
             }
+            System.out.println("VETOR ORDENADO" + "\n" + "TEMPO GASTO: " + ((System.currentTimeMillis() - tempoInicial)/1000) + " segundos");
         }
         if(selecaoSort == 2){
+            Long tempoInicial = System.currentTimeMillis();
             InsertionSort.MakeInsertionSort(vetor);
-            System.out.println("VETOR ORDENADO");
 
             for(int i = 0; i< vetor.length;i++){
                 System.out.println(vetor[i]);
             }
+            System.out.println("VETOR ORDENADO" + "\n" + "TEMPO GASTO: " + ((System.currentTimeMillis() - tempoInicial)/1000) + " segundos");
+
         }
         if(selecaoSort == 3){
+            Long tempoInicial = System.currentTimeMillis();
+
             MergeSort.MakeMergeSort(vetor, 0, vetor.length - 1);
             System.out.println("VETOR ORDENADO");
 
@@ -86,14 +93,18 @@ public class main {
                 System.out.println(vetor[i].length());
                 
             }
+            System.out.println("VETOR ORDENADO" + "\n" + "TEMPO GASTO: " + ((System.currentTimeMillis() - tempoInicial)/1000) + " segundos");
         }
         if(selecaoSort == 4){
+            Long tempoInicial = System.currentTimeMillis();
+
             QuickSort.quickSort(vetor, 0,vetor.length - 1);
             System.out.println("VETOR ORDENADO");
             for(int i = 0; i< vetor.length;i++){
                 System.out.println(vetor[i].length());
                 
             }
+            System.out.println("VETOR ORDENADO" + "\n" + "TEMPO GASTO: " + ((System.currentTimeMillis() - tempoInicial)/1000) + " segundos");
         }
         System.out.println("\n" + "Menu(3)" + "\n" + "Continuar (1)");
         selecao = leia.nextInt();
